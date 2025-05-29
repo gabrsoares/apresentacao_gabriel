@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  scroll-behavior: smooth;
+  background-color: #f5f5f5;
+}
+
+.section {
+  height: 100vh;
+  padding: 60px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 60px;
+}
+
+.intro-flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.intro-text {
+  flex: 1;
+  max-width: 600px;
+  text-align: left;
+}
+
+.intro-photo img {
+  max-width: 300px;
+  border-radius: 50%;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+.main-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.jogos {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-intro {
+  background: #ffffe3;
+  color: #004d40;
+}
+
+.caderno {
+  background: repeating-linear-gradient(
+    white,
+    white 24px,
+    #e0e0e0 25px
+  );
+  border-left: 4px solid #1976d2;
+  padding: 30px 20px;
+  margin: 30px 0;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  max-width: 700px;
+  line-height: 2.2;
+}
+
+.caderno p {
+  margin: 10px 0;
+  padding-left: 10px;
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+.game_logos{
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.section-hero {
+  background: #ff9e8f;
+  color: #880e4f;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  max-width: 600px;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 200px;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.flash {
+  width: 350px;
+  height: 500px;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.flash.show {
+  opacity: 1;
+  transform: translateY(0);
+}

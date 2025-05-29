@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minha Apresentação</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <section class="section section-intro">
+    </div>
+    <div class="intro-photo">
+      <h1>Olá, eu sou o Gabriel!</h1>
+      <img src="/images/pfp.png" alt="Foto do Gabriel" />
+      <div class="intro-flex-container">
+        <div class="intro-text">
+          <div class="caderno">
+            <h3>Coisas que eu gosto de fazer</h3>
+            <p>📚 Ler </p>
+            <p>🎮 Jogar videogames</p>
+            <p>🍳 Cozinhar</p>
+            <p>🎧 Ouvir música</p>
+            <p>🎬 Assistir séries e filmes</p>
+            <p>💻 Programar (principalmente em java)</p>
+          </div>
+        </div>
+      </div>
+      <h2 id="scroll">🦸‍♂️ Com qual super-herói me identifico?</h2>
+  </section>
+
+  <section class="section section-hero" id="hero">
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1>Flash</h1>
+        <p>Me identifico com o Flash pela sua capacidade de lidar com muitas tarefas de forma extremamente rápida.</p>
+        <p>Se tivesse os poderes dele, eu os usaria para <strong>finalizar rapidamente as tarefas mais rotineiras e
+            cansativas</strong>,
+          otimizando meu tempo e aumentando minha produtividade.</p>
+        <p>Assim, poderia dedicar mais energia a atividades realmente importantes, ou até ter mais tempo livre.</p>
+      </div>
+      <img src="/images/flash.png.png" alt="Flash" class="flash hidden" />
+    </div>
+  </section>
+</body>
+
+<script>
+  document.getElementById('scroll').addEventListener('click', () => {
+    document.getElementById('hero').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  });
+
+  const hiddenElements = document.querySelectorAll('.hidden');
+  hiddenElements.forEach(el => observer.observe(el));
+</script>
+
+</html>
